@@ -1,0 +1,63 @@
+use petcage;
+create table if not exists dim_week(
+  id int primary key auto_increment comment '自增主键',
+  wk varchar(100) comment '周',
+  create_time datetime default current_timestamp comment '创建时间'
+) default charset='utf8';
+
+insert into dim_week(wk) values('1');
+insert into dim_week(wk) values('2');
+insert into dim_week(wk) values('3');
+insert into dim_week(wk) values('4');
+insert into dim_week(wk) values('5');
+insert into dim_week(wk) values('6');
+insert into dim_week(wk) values('7');
+insert into dim_week(wk) values('8');
+insert into dim_week(wk) values('9');
+insert into dim_week(wk) values('10');
+insert into dim_week(wk) values('11');
+insert into dim_week(wk) values('12');
+insert into dim_week(wk) values('13');
+insert into dim_week(wk) values('14');
+insert into dim_week(wk) values('15');
+insert into dim_week(wk) values('16');
+insert into dim_week(wk) values('17');
+insert into dim_week(wk) values('18');
+insert into dim_week(wk) values('19');
+insert into dim_week(wk) values('20');
+insert into dim_week(wk) values('21');
+insert into dim_week(wk) values('22');
+insert into dim_week(wk) values('23');
+insert into dim_week(wk) values('24');
+insert into dim_week(wk) values('25');
+insert into dim_week(wk) values('26');
+insert into dim_week(wk) values('27');
+insert into dim_week(wk) values('28');
+insert into dim_week(wk) values('29');
+insert into dim_week(wk) values('30');
+insert into dim_week(wk) values('31');
+insert into dim_week(wk) values('32');
+insert into dim_week(wk) values('33');
+insert into dim_week(wk) values('34');
+insert into dim_week(wk) values('35');
+insert into dim_week(wk) values('36');
+insert into dim_week(wk) values('37');
+insert into dim_week(wk) values('38');
+insert into dim_week(wk) values('39');
+insert into dim_week(wk) values('40');
+insert into dim_week(wk) values('41');
+insert into dim_week(wk) values('42');
+insert into dim_week(wk) values('43');
+insert into dim_week(wk) values('44');
+insert into dim_week(wk) values('45');
+insert into dim_week(wk) values('46');
+insert into dim_week(wk) values('47');
+insert into dim_week(wk) values('48');
+insert into dim_week(wk) values('49');
+insert into dim_week(wk) values('50');
+insert into dim_week(wk) values('51');
+insert into dim_week(wk) values('52');
+insert into dim_week(wk) values('53');
+insert into dim_week(wk) values('54');
+insert into dim_week(wk) values('55');
+insert into dim_week(wk) values('56');
