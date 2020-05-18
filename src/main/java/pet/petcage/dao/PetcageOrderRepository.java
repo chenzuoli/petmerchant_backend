@@ -32,4 +32,10 @@ public interface PetcageOrderRepository extends JpaRepository<PetcageOrder, Stri
     @Query(value = "select substring(create_time, 1,7) as mt, count(1) as cnt from petcage_order where substring(create_time, 1, 7) > ?1 group by substring(create_time, 1, 7) order by substring(create_time, 1, 7)", nativeQuery = true)
     List<Object[]> timeMonth2(String start_mt);
 
+    @Query(value = "select * from petcage_order where device_id = ?1 order by create_time desc", nativeQuery = true)
+    List<PetcageOrder> getOrders(String device_id);
+
+    @Query(value = "select * from petcage_order where phone like ?1 and substring(create_time, 1, 10) = ?2 order by create_time desc", nativeQuery = true)
+    List<PetcageOrder> searchOrder(String phone, String date);
+
 }

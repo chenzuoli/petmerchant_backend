@@ -3,6 +3,7 @@ package pet.petcage.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pet.petcage.dao.PetcageOrderRepository;
+import pet.petcage.entity.PetcageOrder;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -73,5 +74,13 @@ public class PetcageOrderService {
         System.out.println("-------deal end--------");
         System.out.println(result);
         return result;
+    }
+
+    public List<PetcageOrder> getOrders(String petcage_id) {
+        return orderRepository.getOrders(petcage_id);
+    }
+
+    public List<PetcageOrder> searchOrders(String phone, String date) {
+        return orderRepository.searchOrder(phone, date);
     }
 }
