@@ -17,4 +17,7 @@ public interface DimPetRepository extends JpaRepository<DimPet, String> {
     @Query(value = "select * from dim_pet", nativeQuery = true)
     List<DimPet> getDimPet();
 
+    @Query(value = "select * from dim_pet where size > 0", nativeQuery = true)
+    List<DimPet> petDogDistributed();
+
 }

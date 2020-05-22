@@ -17,11 +17,14 @@ import java.util.List;
 public interface PetcageRepository extends JpaRepository<Petcage, String> {
     @Transactional
     @Modifying
-    @Query(value = "insert into device(phone, accessory_ids, status) values (?1, ?2, ?3)", nativeQuery = true)
-    int addPetcage(String phone, String accessory_ids, String status);
+    @Query(value = "insert into device(phone, accessory_ids, status, size) values (?1, ?2, ?3, ?4)", nativeQuery = true)
+    int addPetcage(String phone, String accessory_ids, String status, String size);
 
     @Query(value = "select device_id from device where phone = ?1", nativeQuery = true)
     List<String> getPetcages(String phone);
+
+    @Query(value = "select * from device where phone = ?1", nativeQuery = true)
+    List<Petcage> petcageList(String phone);
 
 
 }

@@ -54,7 +54,7 @@ public class PetcageOrderController {
                 String pet_id = order.getPet_id();
                 for (DimPet pet : dimPet) {
                     String pet_type = "";
-                    if (pet.getId().equals(pet_id)){
+                    if (pet.getId().equals(pet_id)) {
                         pet_type = pet.getPet_type();
                     }
                     jsonObject.put("pet_type", pet_type);

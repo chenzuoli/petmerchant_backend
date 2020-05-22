@@ -30,7 +30,8 @@ public class Petcage {
     private String longitude; // 设备径度
     private String latitude; // 设备纬度
     private String kwh; // 设备电量余额
-    private String status; // 状态：采购中，已投放，已下架
+    private String status; // 状态：1采购中，2已投放，3已下架
+    private String size; // 大小：1小，2中，3大
     private String create_time; //
     private String update_time; //
 }

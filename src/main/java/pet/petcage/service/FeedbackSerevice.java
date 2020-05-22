@@ -32,7 +32,7 @@ public class FeedbackSerevice extends BaseService<Feedback> {
      */
     public int addFeedback(String feedback_type, String petcage_id, String feedback_content,
                            String pictures, String latitude, String longitude, String description) {
-        System.out.println("add feedback params: " + "," + feedback_content + "," + feedback_content + "," + "," + pictures + ","  +  petcage_id + "," + description);
+        System.out.println("add feedback params: " + "," + feedback_content + "," + feedback_content + "," + "," + pictures + "," + petcage_id + "," + description);
         return feedRepo.addFeedback(feedback_type, petcage_id, feedback_content, pictures, latitude, longitude, description);
     }
 

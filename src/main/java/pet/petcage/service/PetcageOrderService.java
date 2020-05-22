@@ -20,7 +20,7 @@ public class PetcageOrderService {
     public HashMap<String, TreeMap<String, String>> timeDistributed() {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String cur_dt = format.format(new Date(System.currentTimeMillis()));
-        String seven_day_before = format.format(new Date(System.currentTimeMillis()-7*86400*1000));
+        String seven_day_before = format.format(new Date(System.currentTimeMillis() - 7 * 86400 * 1000));
         HashMap<String, TreeMap<String, String>> timeDis = new HashMap<>();
         // day
         System.out.println("current dt: " + cur_dt);
@@ -35,7 +35,7 @@ public class PetcageOrderService {
         calendar.setTime(new Date());
         int start_wk = calendar.get(Calendar.WEEK_OF_YEAR);
         System.out.println("currend week: " + start_wk);
-        System.out.println("seven week before: " + (start_wk-7));
+        System.out.println("seven week before: " + (start_wk - 7));
         List<String> timeWeek1 = orderRepository.timeWeek1(start_wk - 7, start_wk);
         List<Object[]> timeWeek2 = orderRepository.timeWeek2(start_wk - 7);
         values = deal(timeWeek1, timeWeek2);
@@ -62,7 +62,7 @@ public class PetcageOrderService {
         System.out.println(time2);
         for (String day : time1) {
             String value = "0";
-            for (Object[] row: time2) {
+            for (Object[] row : time2) {
                 for (int i = 0; i < row.length; i++) {
                     if (day.equals(row[0].toString())) {
                         value = row[1].toString();

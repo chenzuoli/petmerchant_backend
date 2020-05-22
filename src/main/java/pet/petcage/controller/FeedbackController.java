@@ -1,7 +1,6 @@
 package pet.petcage.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -37,7 +36,7 @@ public class FeedbackController {
                           @RequestParam("latitude") String latitude,
                           @RequestParam("longitude") String longitude,
                           @RequestParam("description") String description) {
-        int result = feedbackSerevice.addFeedback("4", petcage_id, feedback_content, pictures,latitude, longitude, description);
+        int result = feedbackSerevice.addFeedback("4", petcage_id, feedback_content, pictures, latitude, longitude, description);
         if (result > 0) {
             return ResultDTO.ok(result);
         } else {
